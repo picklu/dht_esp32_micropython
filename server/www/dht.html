@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
+    <link rel="stylesheet" href="style.css">
+    <title>DHT | REPORT</title>
 </head>
 <body>
-    <h1>MicroPython DHT-11 Sensor on ESP32</h1>
-    <div id="result" style="color: SlateBlue; font-size: 200%; font-family: Monaco, monospace; margin: 20px"></div>
+    <h1>DHT-11+ESP32 Powered by MicroWebSrv</h1>
+    <div id="result">Loadding data ...</div>
+    <a class="button" href="/">Go back</a>
+    <div class="footer"><small class="copy">@copy 2020 picklu</small></div>
     <script>
         if(typeof(EventSource) !== 'undefined') {
             const source = new EventSource('http://' + window.location.hostname + '/dht');

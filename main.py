@@ -1,11 +1,16 @@
 import os, network
+from server.start import srv
+
+print("=============================")
+print("Connecting to the network ...")
 station = network.WLAN(network.STA_IF)
 station.active(True)
 if not station.isconnected():
-    print('connecting to network...')
     station.connect("mithu-G", "Mithu@1977")
     while not station.isconnected():
         pass
-print('network config:', station.ifconfig())
-
-from server import start
+stationConfig =  station.ifconfig()
+print('Connected to the network. Network Configuration:', stationConfig)
+print("=============================")
+print("Starting server ...")
+srv.Start()
