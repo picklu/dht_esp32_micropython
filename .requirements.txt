@@ -1,5 +1,6 @@
 ecdsa==0.15
 esptool==2.8
+mpy-cross==1.12
 pyaes==1.6.1
 pyserial==3.4
 pyudev==0.22.0
